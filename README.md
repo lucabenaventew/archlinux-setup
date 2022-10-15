@@ -1,2 +1,2 @@
-# archlinux-setup
+# Archlinux Working Environment
 Steps to configure my working environment
