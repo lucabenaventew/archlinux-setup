@@ -79,7 +79,7 @@ alias checkcolors='for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i
 # Plugins
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-# source /usr/share/zsh-sudo/sudo.plugin.zsh
+source /usr/share/zsh-sudo/sudo.plugin.zsh
 
 # Functions
 function mkt(){
