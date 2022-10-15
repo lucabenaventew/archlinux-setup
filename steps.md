@@ -49,8 +49,20 @@ or
 $ wget https://raw.githubusercontent.com/lucabenaventew/archlinux-setup/dev/sudo.plugin.zsh
 $ cd
 $ wget https://raw.githubusercontent.com/lucabenaventew/archlinux-setup/dev/.zshrc
+$ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 $ sudo su
 $ cd
 $ ln -s -f /home/admin/.zshrc .zshrc /root/.zshrc
 $ ls -la
 ``` 
+
+## Powerlevel10k
+```
+$ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+$ wget https://raw.githubusercontent.com/lucabenaventew/archlinux-setup/dev/.p10k.zsh
+$ sudo su
+$ cd
+$ cp /home/admin/.p10k.zsh /root/
+```
