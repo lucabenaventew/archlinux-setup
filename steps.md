@@ -43,5 +43,13 @@ $ mkdir zsh-sudo
 $ chown admin:admin zsh-sudo/
 )
 $ cd /usr/share/zsh-sudo
-
+$ wget https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/sudo/sudo.plugin.zsh
+or
+$ wget https://raw.githubusercontent.com/lucabenaventew/archlinux-setup/dev/sudo.plugin.zsh
+$ cd
+$ wget https://raw.githubusercontent.com/lucabenaventew/archlinux-setup/dev/.zshrc
+$ sudo su
+$ cd
+$ ln -s -f /home/admin/.zshrc .zshrc /root/.zshrc
+$ ls -la
 ``` 
