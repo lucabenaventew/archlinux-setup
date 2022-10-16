@@ -62,7 +62,7 @@ alias ll='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
 alias cat='bat'
 alias ..='cd ..'
-alias updsys='sudo apt update && sudo apt upgrade'
+alias updsys='sudo pacman -Syu'
 alias c.='clear'
 alias e.='exit'
 alias nvimconfig='cd ~/.config/nvim/'
@@ -72,7 +72,6 @@ alias gbr='git branch'
 alias gbra='git branch -a'
 alias gco='git checkout'
 alias analizedisk='ncdu -x -q'
-alias checkcolors='for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -82,6 +81,10 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh-sudo/sudo.plugin.zsh
 
 # Functions
+
+function checkcolors() {
+  for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done}
+
 function mkt(){
 	mkdir {nmap,content,exploits,scripts}
 }
@@ -139,10 +142,6 @@ function rmk(){
 	shred -zun 10 -v $1
 }
 
-# Finalize Powerlevel10k instant prompt. Should stay at the bottom of ~/.zshrc.
-(( ! ${+functions[p10k-instant-prompt-finalize]} )) || p10k-instant-prompt-finalize
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 bindkey "^[[3~" delete-char
@@ -153,14 +152,14 @@ bindkey "^[[1;3D" backward-word
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/luca/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/admin/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/luca/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/luca/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/admin/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/admin/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/luca/anaconda3/bin:$PATH"
+        export PATH="/home/admin/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -168,3 +167,5 @@ unset __conda_setup
 
 eval "$(~/.rbenv/bin/rbenv init - zsh)"
 source ~/powerlevel10k/powerlevel10k.zsh-theme
+# Finalize Powerlevel10k instant prompt. Should stay at the bottom of ~/.zshrc.
+(( ! ${+functions[p10k-instant-prompt-finalize]} )) || p10k-instant-prompt-finalize
