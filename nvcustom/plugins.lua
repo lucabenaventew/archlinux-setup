@@ -20,6 +20,23 @@ return {
     end
   },
 
+  ["nvim-tree/nvim-tree.lua"] = {
+    override_options = {
+       view = {
+        adaptive_size = false,
+      },
+      git = {
+        enable = true,
+        ignore = false,
+      },
+      renderer = {
+        icons = {
+          show = { git = true },
+        },
+      },
+    }
+  },
+
   ["ThePrimeagen/vim-be-good"] = {},
 
   ["williamboman/mason.nvim"] = false,
