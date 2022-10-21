@@ -5,9 +5,6 @@ vim.api.nvim_set_keymap('i', 'jk', '<ESC>', { noremap = true })
 
 -- NVCHAD mappings
 M.nvimtree = {
-  n = {
-    ["<F16>"] = { "<cmd> NvimTreeToggle <CR>", "toggle nvimtree" },
-  }
 }
 
 M.comment = {
