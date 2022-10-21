@@ -4,8 +4,6 @@ local M = {}
 vim.api.nvim_set_keymap('i', 'jk', '<ESC>', { noremap = true })
 
 -- NVCHAD mappings
-M.nvimtree = {
-}
 
 M.comment = {
   n = {

@@ -5,6 +5,7 @@ return {
   },
   ["Pocco81/AutoSave.nvim"] = {},
   ["github/copilot.vim"] = {},
+  ["ThePrimeagen/vim-be-good"] = {},
   ["neoclide/coc.nvim"] = {
     disable = true,
     branch = master,
@@ -37,9 +38,9 @@ return {
     }
   },
 
-  ["ThePrimeagen/vim-be-good"] = {},
 
-  ["williamboman/mason.nvim"] = false,
+
+  ["williamboman/mason.nvim"] = {},
   ["neovim/nvim-lspconfig"] = {} ,
   ["rafamadriz/friendly-snippets"] = {} ,
   ["hrsh7th/nvim-cmp"] = {} ,
