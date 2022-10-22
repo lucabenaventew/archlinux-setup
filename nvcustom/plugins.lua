@@ -21,7 +21,7 @@ return {
     end
   },
 
-  ["nvim-tree/nvim-tree.lua"] = {
+  --[[ ["nvim-tree/nvim-tree.lua"] = {
     override_options = {
        view = {
         adaptive_size = false,
@@ -36,7 +36,7 @@ return {
         },
       },
     }
-  },
+  }, ]]
 
 
 
