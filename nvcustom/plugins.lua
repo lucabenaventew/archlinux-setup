@@ -11,6 +11,11 @@ return {
     branch = master,
     run = "yarn install --frozen-lockfile && yarn compile",
   },
+  ["prettier/vim-prettier"] = {
+    run = "yarn install --frozen-lockfile --production",
+  },
+  ["mattn/emmet-vim"] = {},
+
 
   -- NVC Plugins
   ["goolord/alpha-nvim"] = {
