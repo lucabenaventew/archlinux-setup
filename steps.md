@@ -1,3 +1,4 @@
+xorg-server xorg-xinit mesa mesa-demos gnome gnome-extra gdm
 ## AUR
 
 ```
