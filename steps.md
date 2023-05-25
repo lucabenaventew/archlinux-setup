@@ -1,3 +1,4 @@
+xf86-video-nouveau
 xorg-server xorg-xinit mesa mesa-demos gnome gnome-extra gdm
 ## AUR
 
